@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            background-color: lawngreen;
+            margin-bottom: 20px;
+        }
+        .nav>div{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            width: 30%;
+            margin: auto;
+        }
+        .nav a{
+            text-decoration: none;
+            padding-top: 15px;
+            color: white;
+        }
+        .task_tabel{
+            width: 70%;
+            padding: 20px  40px;
+            margin: auto;
+            box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+            display: flex;
+            justify-content: space-around;
+        }
+        .task_tabel>div:nth-child(1){
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5%;
+            width: auto;
+        }
+        .task_tabel>div:nth-child(1)>form>button{
+            background-color: lightgreen;
+            height: 30px;
+            border-radius: 5%;
+            border: 0px;
+        }
+        
+        .tasks{
+            margin-left: 30px;
+            width: 70%;
+        }
+        .tasks>table>thead>tr {
+            background-color: lightgreen;
+            text-align: center;
+        }
+        .tasks>table{
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div>
+            <p>Masai Task Manager</p>
+            <a href="./index.html">Home</a>
+            <a href="./deletedTask.html">Deleted Tasks</a>
+        </div>
+    </div>
+
+    <div class="task_tabel">
+        <div class="task-form">
+            <form action="add-task">
+                <label for="">task name:</label>
+                <input type="text">
+                <br>
+                <br>
+                <select name="Priority" id="">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <br>
+                <br>
+                <button>Create Task</button>
+            </form>
+        </div>
+        <div class="tasks">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Priority</td>
+                        <td>Status</td>
+                        <td>Remove</td>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

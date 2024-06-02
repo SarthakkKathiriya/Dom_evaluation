@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            background-color: lawngreen;
+            margin-bottom: 20px;
+        }
+        .nav>div{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            width: 30%;
+            margin: auto;
+        }
+        .nav a{
+            text-decoration: none;
+            padding-top: 15px;
+            color: white;
+        }
+        .task_tabel{
+            padding: 20px  40px;
+            margin: auto;
+            box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+            
+        }
+        table>thead>tr {
+            background-color: lightgreen;
+            text-align: center;
+        }
+        table{
+            
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div>
+            <p>Masai Task Manager</p>
+            <a href="./index.html">Home</a>
+            <a href="./deletedTask.html">Deleted Tasks</a>
+        </div>
+    </div>
+
+    <div class="task_tabel">
+        <h1>Deleted Tasks</h1>
+        <select name="" id="priority_filter" >
+            <option value="">Filter By Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <select name="" id="status_filter">
+            <option value="">Filter by Status</option>
+            <option value="pending">Pending</option>
+            <option value="process">in-Process</option>
+            <option value="complete">complete</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Priority</td>
+                    <td>Status</td>
+                    <td>Restore</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
